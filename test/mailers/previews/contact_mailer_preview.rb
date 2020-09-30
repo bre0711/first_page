@@ -5,7 +5,7 @@ class ContactMailerPreview < ActionMailer::Preview
   def contact_mail
     contact = Contact.new(email: "aaa@gmail.com", message: "問い合わせメッセージ")
 
-    ContactMailer.contact_mail(contact)
+    ContactMailer.send_when_admin_reply(contact)
   end
 
 end
