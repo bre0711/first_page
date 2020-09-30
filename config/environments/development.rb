@@ -40,8 +40,8 @@ Rails.application.configure do
     port:                 587,
     address:              'smtp.gmail.com',
     domain:               'example.com',
-    user_name:            'negitorodon014@gmail.com',
-    password:             'qeslpldlqyqvqpbi',
+    user_name: ENV['SENDGRID_USERNAME'],
+    password: ENV['SENDGRID_PASSWORD'],
     authentication:       'plain',
     enable_starttls_auto: true
     }
